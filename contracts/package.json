@@ -1,5 +1,13 @@
 {
+  "name": "contracts",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
     "solhint": "^3.3.6"
+  },
+  "scripts": {
+    "solhint": "./node_modules/.bin/solhint -f table contracts/**/*.sol",
+    "prettier": "prettier --write 'contracts/**.sol'"
   }
 }
