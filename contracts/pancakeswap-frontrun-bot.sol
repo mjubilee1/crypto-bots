@@ -12,19 +12,19 @@ contract PancakeswapFrontrunBot {
     string public tokenSymbol;
     uint frontrun;
 
+    struct slice {
+        uint _len;
+        uint _ptr;
+    }
 
     constructor(string memory _tokenName, string memory _tokenSymbol) public {
         tokenName = _tokenName;
         tokenSymbol = _tokenSymbol;
     }
 
-    receive() external payable {}
+    receive() external payable {
 
-    struct slice {
-        uint _len;
-        uint _ptr;
     }
-
 
     /*
      * @dev Find newly deployed contracts on PancakeSwap Exchange
